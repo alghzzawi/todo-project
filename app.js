@@ -5,24 +5,32 @@ if(usermsg == false){
 
 var userName = prompt("What's your name?")
 
-var gender = prompt('what is your gender')
-if (gender == 'female') {
-    var genderNickName = "Ms "
-    
-} else if (gender == 'male') {
-  var genderNickName = "Mr "
-}
-else{
-    var genderNickName = "Mr "
+
+while(true){
+    var gender = prompt('what is your gender')
+    if (gender === 'female') {
+        var genderNickName = "Ms "
+        break;
+    } else if (gender === 'male') {
+        var genderNickName = "Mr "
+        break;
+    }
+    else{
+        var genderNickName = ""
+    }
 }
 
 alert('welcome ' + genderNickName + userName)
 
 
+
 var age = prompt("What's your age?")
-if (age <= 0){
-    alert("no age less or equle 0")
+while(age <= 0){
+    alert("your age must be greater than 0")
+
+    age = prompt("What's your age?")
 }
+
 
 var music = prompt("do you like music")
 if(music === ''){
@@ -30,7 +38,7 @@ if(music === ''){
 }
 var arr =[];
 arr.push(music);
-var play = prompt("do you like play footbol")
+var play = prompt("do you like play fotboll")
 if(play === ''){
     alert("Invalid");
 }
